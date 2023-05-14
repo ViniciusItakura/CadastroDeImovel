@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Imóveis - Imobiliária Ingaterra</title>
+    <title>Cadastre seu Imóvel - Imobiliária Inglaterra</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -20,107 +20,106 @@
         </div>
     </header>
 
-    <main class="formulario-alinhamento">
-        <div class="formulario container">
-            <h2>Cadastro de imóvel</h2>
-
-            <form action="#">
-                <div class="form first">
-                    <div class="dados proprietario">
-                        <span class="titulo">Dados do proprietário</span>
-
-                        <div class="fields">
-                            <div class="input-field">
-                                <label>Nome Completo</label>
-                                <input type="text" placeholder="Digite seu nome..." required>
-                            </div>
-
-                            <div class="input-field">
-                                <label>Celular</label>
-                                <input type="tel" placeholder="Digite seu número de celular" required>
-                            </div>
-
-                            <div class="input-field">
-                                <label>E-mail</label>
-                                <input type="email" placeholder="Digite seu e-mail...">
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="nextBtn">
-                        <span class="btnText">Próximo</span>
-                        <i class="uil uil-navigator"></i>
-                    </button>
-                </div>
-
-                <div class="form first">
-                    <div class="dados proprietario">
-                        <span class="titulo">Dados do imóvel</span>
-
-                        <div class="fields">
-                            <div class="input-field">
-                                <label>Tipo do imóvel</label>
-                                <select id="tipo" name="tipo" class="dropdown" required>
-                                    <option value="casa">Casa</option>
-                                    <option value="apartamento">Apartamento</option>
-                                    <option value="Terreno">Terreno</option>
-                                    <option value="barracao">Barracão</option>
-                                    <option value="sala">Sala Comercial</option>
-                                    <option value="loja">Loja Comercial</option>
-                                </select>
-                            </div>
-
-                            <div class="input-field">
-                                <label>Qual o interesse?</label>
-                                <select id="interesse" name="interesse" class="dropdown" required>
-                                    <option value="casa">Venda</option>
-                                    <option value="apartamento">Locação</option>
-                                </select>
-                            </div>
-
-                            <div class="input-field">
-                                <label>Valor</label>
-                                <input type="number" placeholder="Digite o valor..." required>
-                            </div>
-
-
-                            <div class="input-field">
-                                <label>Quantos quartos?</label>
-                                <input type="number" placeholder="Digite a quantidade...">
-                            </div>
-
-                            <div class="input-field">
-                                <label>Quantos quartos são suítes?</label>
-                                <input type="number" placeholder="Digite a quantidade...">
-                            </div>
-
-                            <div class="input-field">
-                                <label>Quantos banheiros no total?</label>
-                                <input type="number" placeholder="Digite a quantidade...">
-                            </div>
-
-                            <div class="input-field">
-                                <label>Endereço completo</label>
-                                <input type="text" placeholder="Digite o endereço..." required>
-                            </div>
-
-                            <div class="input-field">
-                                <label>Nome do edifício (Se for apartamento)</label>
-                                <input type="text" placeholder="Digite o endereço..." required>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <button class="nextBtn">
-                        <span class="btnText">Próximo</span>
-                        <i class="uil uil-navigator"></i>
-                    </button>
-                </div>
-            </form>
+    <form data-multi-step class="multi-step-form" method="post" action="./enviar.php">
+        <div class="card" data-step>
+            <h3 class="step-title">Dados do proprietário</h3>
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" placeholder="Digite seu nome..." id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="celular">Celular</label>
+                <input type="tel" placeholder="Digite seu número de celular" id="celular" name="celular" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="Digite seu e-mail..." id="email" name="email">
+            </div>
+            <div class="botoes">
+                <button type="button" data-next>Avançar</button>
+            </div>
         </div>
-    </main>
 
+        <div class="card" data-step>
+            <h3 class="step-title">Dados do imóvel</h3>
+            <div class="form-group">
+                <label for="tipo">Tipo do imóvel*</label>
+                <select id="tipo" name="tipo" class="dropdown" name="tipo" required>
+                    <option value="casa">Casa</option>
+                    <option value="apartamento">Apartamento</option>
+                    <option value="Terreno">Terreno</option>
+                    <option value="barracao">Barracão</option>
+                    <option value="sala">Sala Comercial</option>
+                    <option value="loja">Loja Comercial</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="interesse">Qual o interesse?*</label>
+                <select id="interesse" name="interesse" class="dropdown" name="interesse" required>
+                    <option value="casa">Venda</option>
+                    <option value="apartamento">Locação</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor*</label>
+                <input type="number" placeholder="Digite o valor..." id="valor" name="valor" required>
+            </div>
+            <div class="form-group">
+                <label for="quartos">Quantos quartos?</label>
+                <input type="number" placeholder="Digite a quantidade..." id="quartos" name="quartos">
+            </div>
+            <div class="form-group">
+                <label for="suites">Quantos quartos são suítes?</label>
+                <input type="number" placeholder="Digite a quantidade..." id="suites" name="suites">
+            </div>
+            <div class="form-group">
+                <label for="banheiros">Quantos banheiros no total?</label>
+                <input type="number" placeholder="Digite a quantidade..." id="banheiros" name="banheiros">
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço completo*</label>
+                <input type="text" placeholder="Digite o endereço..." id="endereco" name="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="condominio">Nome do condomínio (Se tiver)</label>
+                <input type="text" placeholder="Digite o endereço..." id="condominio" name="condominio">
+            </div>
+            <div class="form-group">
+                <label for="complemento">Complemento*</label>
+                <input type="text" placeholder="Digite o complemento..." id="complemento" name="complemento" required>
+            </div>
+            <div class="botoes">
+                <button type="button" data-previous>Voltar</button>
+                <button type="button" data-next>Avançar</button>
+            </div>
+        </div>
+        <div class="card" data-step>
+            <h3 class="step-title">Exclusividade</h3>
+            <div class="form-group">
+                <p>Se você deixar com exclusividade você terá algumas vantagens como: Dedicação exclusiva: Ao deixar o
+                    imóvel com exclusividade, a imobiliária se dedica totalmente à venda ou locação do seu imóvel. Os
+                    corretores da imobiliária estarão focados em promover e mostrar o seu imóvel a potenciais
+                    compradores ou locatários, aumentando as chances de concluir uma transação.<br>
+                    Maior visibilidade: A imobiliária poderá promover seu imóvel de forma mais ampla e eficiente. Ela
+                    terá a liberdade de utilizar seus recursos de marketing, como anúncios em sites especializados,
+                    redes sociais e outros canais de divulgação, para aumentar a visibilidade do imóvel e atrair mais
+                    interessados.
+                </p>
+                <label for="exclusividade">Quanto tempo de exclusividade?</label>
+                <select id="exclusividade" name="exclusividade" class="dropdown" name="exclusividade" required>
+                    <option value="nenhuma">Nenhuma</option>
+                    <option value="30dias">30 Dias</option>
+                    <option value="60dias">60 Dias</option>
+                    <option value="90dias">90 Dias</option>
+                    <option value="Sempre">Para sempre</option>
+                </select>
+            </div>
+            <div class="botoes">
+                <button type="button" data-previous>Voltar</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+    </form>
 </body>
 
 </html>

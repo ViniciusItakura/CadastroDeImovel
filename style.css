@@ -65,103 +65,21 @@ dd {
 }
 
 
-/*Formulário*/
-
-.formulario-alinhamento {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5f5f5;
-}
-
-.formulario {
-    background-color: #ffffff;
-    position: relative;
-    max-width: 900px;
-    border-radius: 6px;
-    padding: 30px;
-    margin: 0 15px;
-    width: 100%;
+.card {
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: .5rem;
+    padding: 5rem;
+    max-width: 1400px;
+    margin: 100px auto;
+    animation: fade 250ms ease-in-out forwards;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.formulario h2 {
-    position: relative;
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
-}
-
-.formulario h2::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 3px;
-    width: 27px;
-    background-color: #4070f4;
-    border-radius: 8px;
-}
-
-.formulario form {
-    position: relative;
-    margin-top: 16px;
-    min-height: 490px;
-    background-color: #fff;
-}
-
-.formulario form .dados {
-    margin-top: 30px;
-}
-
-
-.formulario form .titulo {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    margin: 6px 0;
-    color: #333;
-}
-
-.formulario form .fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-form .fields .input-field {
-    display: flex;
-    flex-direction: column;
-    margin: 4px 0;
-}
-
-.input-field label {
-    font-size: 12px;
-    font-weight: 500;
-    color: #2e2e2e;
-}
-
-.input-field input {
-    outline: none;
-    font-size: 14px;
-    font-weight: 400;
-    color: #333;
-    border-radius: 5px;
-    border: 1px solid #aaa;
-    padding: 0 15px;
-    height: 42px;
-    margin: 8px 0;
-}
-
-.input-field input:is(:focus, :valid) {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.formulario form button {
+.card button {
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,14 +94,53 @@ form .fields .input-field {
     color: #D0D0CE;
     cursor: pointer;
     transition: all 0.3s linear;
+
 }
 
-.formulario form button:hover {
-    background-color: #000018;
+.botoes {
+    grid-column: 1;
+    gap: 15px;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.formulario form button i {
-    margin-left: 8px;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+    gap: .25em;
+}
+
+.form-group p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin: 0;
+}
+
+.form-group>label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.form-group>input {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+.form-group>input,
+.form-group>select {
+    margin-right: 20px;
 }
 
 .dropdown {
@@ -196,4 +153,70 @@ form .fields .input-field {
     padding: 0 15px;
     height: 42px;
     margin: 8px 0;
+}
+
+.form-group>input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    grid-column: 1/-1;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.step-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    width: 27px;
+    background-color: #4070f4;
+    border-radius: 8px;
+}
+
+.card.active {
+    animation: slide 250ms 125ms ease-in-out both;
+}
+
+.multi-step-form {
+    overflow: hidden;
+    position: relative;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(.75);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
 }
