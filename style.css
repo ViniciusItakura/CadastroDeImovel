@@ -199,6 +199,12 @@ dd {
     justify-content: center;
 }
 
+#fotos {
+    border: none;
+    background-color: white;
+    box-shadow: none;
+}
+
 @media (max-width: 800px) {
     .card {
         grid-template-columns: 1fr 1fr;

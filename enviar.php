@@ -1,5 +1,5 @@
 <?php
-require './PHPMailer/src/PHPMailer.php"';
+require './PHPMailer/src/PHPMailer.php';
 require './PHPMailer/src/SMTP.php';
 require './PHPMailer/src/Exception.php';
 
@@ -64,9 +64,34 @@ try {
         </body>
         </html>';
 
-    // Enviar o email
-    $mail->send();
+    // Verifica se foram enviados arquivos
+    if (isset($_FILES['fotos'])) {
+        $totalFiles = count($_FILES['fotos']['name']);
+        
+        // Loop para processar cada arquivo
+    for ($i = 0; $i < $totalFiles; $i++) {
+        $tmpFilePath = $_FILES['fotos']['tmp_name'][$i];
 
-    echo 'Email enviado com sucesso!';
+        // Verifica se o arquivo foi enviado com sucesso
+        if ($tmpFilePath != "") {
+            // Obtem informações sobre o arquivo
+            $fileName = $_FILES['fotos']['name'][$i];
+            $fileSize = $_FILES['fotos']['size'][$i];
+            $fileType = $_FILES['fotos']['type'][$i];
+
+            // Lê o conteúdo do arquivo
+            $fileContent = file_get_contents($tmpFilePath);
+
+            // Adiciona o arquivo como anexo ao email
+            $mail->addStringAttachment($fileContent, $fileName);
+        }
+    }
+}
+
+// Enviar o email
+$mail->send();
+
+echo 'Email enviado com sucesso!';
 } catch (Exception $e) {
-    echo 'Erro ao enviar o email
+    echo 'Erro ao enviar o email: ' . $mail->ErrorInfo;
+}
