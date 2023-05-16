@@ -9,8 +9,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', Helvetica, sans-serif;
-    color: #000f3e;
-    background-color: #f0f2f8;
+    color: #000000;
+    background-color: #000000;
 }
 
 ul {
@@ -52,7 +52,7 @@ dd {
 /*Header*/
 
 .header-bg {
-    background-color: #001C77;
+    background-color: #000000;
 }
 
 .header img {
@@ -60,6 +60,7 @@ dd {
 }
 
 .header {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     padding: 15px;
@@ -68,7 +69,7 @@ dd {
 
 .card {
     background-color: white;
-    border: 1px solid #000f3e;
+    border: 1px solid #000000;
     border-radius: .5rem;
     padding: 5rem;
     max-width: 1400px;
@@ -89,7 +90,7 @@ dd {
     width: 100%;
     border: none;
     outline: none;
-    background-color: #001C77;
+    background-color: #000000;
     border-radius: 5px;
     margin: 25px 0;
     color: white;
@@ -108,8 +109,8 @@ dd {
 
 .card button:hover {
     background-color: white;
-    color: #001C77;
-    border: 1px solid #001C77;
+    color: #000000;
+    border: 1px solid #000000;
 }
 
 .form-group {
@@ -131,14 +132,14 @@ dd {
 .form-group>label {
     font-size: 15px;
     font-weight: 500;
-    color: #00081f;
+    color: #000000;
 }
 
 .form-group>input {
     outline: none;
     font-size: 14px;
     font-weight: 400;
-    color: #000f3e;
+    background-color: #F7F7F7;
     border-radius: 5px;
     border: 1px solid #aaa;
     padding: 0 15px;
@@ -157,6 +158,7 @@ dd {
     font-weight: 400;
     color: #333;
     border-radius: 5px;
+    background-color: #F7F7F7;
     border: 1px solid #aaa;
     padding: 0 15px;
     height: 42px;
@@ -183,7 +185,7 @@ dd {
     bottom: -10px;
     height: 3px;
     width: 27px;
-    background-color: #001C77;
+    background-color: #000000;
     border-radius: 8px;
 }
 
@@ -206,11 +208,11 @@ dd {
     margin-top: 40px;
     display: flex;
     justify-content: center;
-    color: #00081f;
+    color: #ffffff;
 }
 
 .paragrafo {
-    color: #00081f;
+    color: #000000;
 }
 
 #fotos {
