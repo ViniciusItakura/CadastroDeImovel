@@ -30,16 +30,20 @@
         <div class="card" data-step>
             <h3 class="step-title">Dados do proprietário</h3>
             <div class="form-group">
-                <label for="nome">Nome Completo</label>
+                <label for="nome">Nome Completo*</label>
                 <input type="text" placeholder="Digite seu nome..." id="nome" name="nome" required>
             </div>
             <div class="form-group">
-                <label for="celular">Celular</label>
+                <label for="celular">Celular*</label>
                 <input type="tel" placeholder="Digite seu número de celular" id="celular" name="celular" required>
             </div>
             <div class="form-group">
                 <label for="email">E-mail</label>
                 <input type="email" placeholder="Digite seu e-mail..." id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="documento">Documento pessoal</label>
+                <input type="documento" placeholder="Digite seu documento..." id="documento" name="documento">
             </div>
             <div class="botoes">
                 <button type="button" data-next>Avançar</button>
@@ -67,6 +71,13 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="ocupado">O imóvel está ocupado?*</label>
+                <select id="ocupado" name="ocupado" class="dropdown" name="ocupado" required>
+                    <option value="casa">Não</option>
+                    <option value="apartamento">Sim</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="valor">Valor*</label>
                 <input type="number" min="0" placeholder="Digite o valor..." id="valor" name="valor" required>
             </div>
@@ -83,6 +94,14 @@
                 <input type="number" min="0" placeholder="Digite a quantidade..." id="banheiros" name="banheiros">
             </div>
             <div class="form-group">
+                <label for="metragemtotal">Metragem Total*</label>
+                <input type="text" placeholder="Digite a metragem..." id="metragemtotal" name="metragemtotal" required>
+            </div>
+            <div class="form-group">
+                <label for="metragemconstruida">Metragem construida</label>
+                <input type="text" placeholder="Digite a metragem..." id="metragemconstruida" name="metragemconstruida">
+            </div>
+            <div class="form-group">
                 <label for="endereco">Endereço completo*</label>
                 <input type="text" placeholder="Digite o endereço..." id="endereco" name="endereco" required>
             </div>
@@ -93,6 +112,21 @@
             <div class="form-group">
                 <label for="complemento">Complemento*</label>
                 <input type="text" placeholder="Digite o complemento..." id="complemento" name="complemento" required>
+            </div>
+            <div class="form-group">
+                <label for="armarios">Armários?</label>
+                <div class="armarios" id="armarios">
+                <span>Cozinha</span>
+                <input type="checkbox" id="armarioscozinha" name="armarioscozinha">
+                <span>Quartos</span>
+                <input type="checkbox" id="armariosquartos" name="armariosquartos">
+                <span>Banheiros</span>
+                <input type="checkbox" id="armariosbanheiros" name="armariosbanheiros">
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="vagasgaragem">Quantas vagas de garagem</label>
+                <input type="number" min="0" placeholder="Digite a quantidade..." id="vagasgaragem" name="vagasgaragem">
             </div>
             <div class="botoes">
                 <button type="button" data-previous>Voltar</button>

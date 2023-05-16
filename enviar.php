@@ -50,15 +50,23 @@ try {
                 <li><strong>Nome Completo:</strong> ' . $_POST['nome'] . '</li>
                 <li><strong>Celular:</strong> ' . $_POST['celular'] . '</li>
                 <li><strong>E-mail:</strong> ' . $_POST['email'] . '</li>
+                <li><strong>Documento:</strong> ' . $_POST['documento'] . '</li>
                 <li><strong>Tipo do imóvel:</strong> ' . $_POST['tipo'] . '</li>
+                <li><strong>Está ocupado?:</strong> ' . $_POST['ocupado'] . '</li>
                 <li><strong>Interesse:</strong> ' . $_POST['interesse'] . '</li>
                 <li><strong>Valor:</strong> ' . $_POST['valor'] . '</li>
                 <li><strong>Quartos:</strong> ' . $_POST['quartos'] . '</li>
                 <li><strong>Suítes:</strong> ' . $_POST['suites'] . '</li>
                 <li><strong>Banheiros:</strong> ' . $_POST['banheiros'] . '</li>
+                <li><strong>Metragem Total:</strong> ' . $_POST['metragemtotal'] . '</li>
+                <li><strong>Metragem Construida:</strong> ' . $_POST['metragemconstruida'] . '</li>
                 <li><strong>Endereço:</strong> ' . $_POST['endereco'] . '</li>
                 <li><strong>Condomínio:</strong> ' . $_POST['condominio'] . '</li>
                 <li><strong>Complemento:</strong> ' . $_POST['complemento'] . '</li>
+                <li><strong>Armários na cozinha:</strong> ' . $_POST['armarioscozinha'] . '</li>
+                <li><strong>Armários nos quartos:</strong> ' . $_POST['armariosquartos'] . '</li>
+                <li><strong>Armários nos banheiros:</strong> ' . $_POST['armariosbanheiros'] . '</li>
+                <li><strong>Quantas vagas de garagem:</strong> ' . $_POST['vagasgaragem'] . '</li>
                 <li><strong>Exclusividade:</strong> ' . $_POST['exclusividade'] . '</li>
             </ul>
         </body>

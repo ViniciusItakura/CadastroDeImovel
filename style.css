@@ -232,6 +232,17 @@ dd {
     padding: 3rem 0;
 }
 
+.armarios {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    font-size: 1.5rem;
+}
+
+.armarios input {
+    margin-right: 2rem;
+}
+
 @media (max-width: 800px) {
     .card {
         grid-template-columns: 1fr 1fr;
