@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
     font-family: 'Quicksand', Helvetica, sans-serif;
     color: #000000;
-    background-color: #000000;
+    background: linear-gradient(#ffffff, #ececec);
 }
 
 ul {
@@ -51,10 +51,6 @@ dd {
 
 /*Header*/
 
-.header-bg {
-    background-color: #000000;
-}
-
 .header img {
     max-width: 250px;
 }
@@ -90,7 +86,7 @@ dd {
     width: 100%;
     border: none;
     outline: none;
-    background-color: #000000;
+    background-color: #001C77;
     border-radius: 5px;
     margin: 25px 0;
     color: white;
@@ -109,8 +105,8 @@ dd {
 
 .card button:hover {
     background-color: white;
-    color: #000000;
-    border: 1px solid #000000;
+    color: #001C77;
+    border: 1px solid #001C77;
 }
 
 .form-group {
@@ -185,7 +181,7 @@ dd {
     bottom: -10px;
     height: 3px;
     width: 27px;
-    background-color: #000000;
+    background-color: #001C77;
     border-radius: 8px;
 }
 
@@ -208,7 +204,7 @@ dd {
     margin-top: 40px;
     display: flex;
     justify-content: center;
-    color: #ffffff;
+    color: #000000;
 }
 
 .paragrafo {
@@ -246,6 +242,10 @@ dd {
 @media (max-width: 800px) {
     .card {
         grid-template-columns: 1fr 1fr;
+    }
+    .titulo {
+        font-size: 35px;
+        text-align: center;
     }
 }
 
