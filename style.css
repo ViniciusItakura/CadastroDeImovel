@@ -8,8 +8,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #111111;
+    font-family: 'Quicksand', Helvetica, sans-serif;
+    color: #000f3e;
+    background-color: #f0f2f8;
 }
 
 ul {
@@ -51,7 +52,7 @@ dd {
 /*Header*/
 
 .header-bg {
-    background-color: #000000;
+    background-color: #001C77;
 }
 
 .header img {
@@ -67,7 +68,7 @@ dd {
 
 .card {
     background-color: white;
-    border: 1px solid #333;
+    border: 1px solid #000f3e;
     border-radius: .5rem;
     padding: 5rem;
     max-width: 1400px;
@@ -88,13 +89,13 @@ dd {
     width: 100%;
     border: none;
     outline: none;
-    background-color: #000000;
+    background-color: #001C77;
     border-radius: 5px;
     margin: 25px 0;
-    color: #D0D0CE;
+    color: white;
     cursor: pointer;
     transition: all 0.3s linear;
-
+    transition: .3s;
 }
 
 .botoes {
@@ -102,6 +103,13 @@ dd {
     gap: 15px;
     display: flex;
     justify-content: flex-start;
+    color: white;
+}
+
+.card button:hover {
+    background-color: white;
+    color: #001C77;
+    border: 1px solid #001C77;
 }
 
 .form-group {
@@ -123,14 +131,14 @@ dd {
 .form-group>label {
     font-size: 15px;
     font-weight: 500;
-    color: #2e2e2e;
+    color: #00081f;
 }
 
 .form-group>input {
     outline: none;
     font-size: 14px;
     font-weight: 400;
-    color: #333;
+    color: #000f3e;
     border-radius: 5px;
     border: 1px solid #aaa;
     padding: 0 15px;
@@ -175,7 +183,7 @@ dd {
     bottom: -10px;
     height: 3px;
     width: 27px;
-    background-color: #4070f4;
+    background-color: #001C77;
     border-radius: 8px;
 }
 
@@ -186,6 +194,7 @@ dd {
 .multi-step-form {
     overflow: hidden;
     position: relative;
+    margin-bottom: 7.5rem;
 }
 
 .hide {
@@ -197,12 +206,28 @@ dd {
     margin-top: 40px;
     display: flex;
     justify-content: center;
+    color: #00081f;
+}
+
+.paragrafo {
+    color: #00081f;
 }
 
 #fotos {
     border: none;
     background-color: white;
     box-shadow: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.footer p {
+    font-size: 2rem;
+    padding: 3rem 0;
 }
 
 @media (max-width: 800px) {

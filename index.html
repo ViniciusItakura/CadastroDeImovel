@@ -8,6 +8,10 @@
     <title>Cadastre seu Imóvel - Imobiliária Inglaterra</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -90,10 +94,6 @@
                 <label for="complemento">Complemento*</label>
                 <input type="text" placeholder="Digite o complemento..." id="complemento" name="complemento" required>
             </div>
-            <div class="form-group fotos">
-                <label for="fotos">Fotos:</label>
-                <input type="file" name="fotos[]" id="fotos" multiple>
-            </div>
             <div class="botoes">
                 <button type="button" data-previous>Voltar</button>
                 <button type="button" data-next>Avançar</button>
@@ -119,9 +119,21 @@
         </div>
 
         <div class="card" data-step>
+            <h3 class="step-title">Fotos</h3>
+            <div class="form-group fotos">
+                <label for="fotos">Envie algumas fotos do seu imóvel</label>
+                <input type="file" name="fotos[]" id="fotos" multiple>
+                <div class="botoes">
+                    <button type="button" data-previous>Voltar</button>
+                    <button type="button" data-next>Avançar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" data-step>
             <h3 class="step-title">Exclusividade</h3>
             <div class="form-group">
-                <p>Se você deixar com exclusividade você terá algumas vantagens como: Dedicação exclusiva: Ao deixar o
+                <p class="paragrafo">Se você deixar com exclusividade você terá algumas vantagens como: Dedicação exclusiva: Ao deixar o
                     imóvel com exclusividade, a imobiliária se dedica totalmente à venda ou locação do seu imóvel. Os
                     corretores da imobiliária estarão focados em promover e mostrar o seu imóvel a potenciais
                     compradores ou locatários, aumentando as chances de concluir uma transação.<br>
@@ -145,6 +157,10 @@
             </div>
         </div>
     </form>
+
+    <footer class="footer">
+        <p>© 2023 Grupo Inglaterra</p>
+    </footer>
 </body>
 
 </html>
